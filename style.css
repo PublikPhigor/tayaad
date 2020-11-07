@@ -67,23 +67,36 @@ li {
 
 header {
     border-bottom: 4px solid #003772;
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 0;
 }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        height: 6vh;
+    }
+
+        .nav-links {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+            .nav-links li {
+                list-style: none;
+            }
+        .burger {
+            display: none;
+        }
+            .burger div {
+                background-color: #000;
+                width: 25px;
+                height: 2px;
+                margin: 5px;
+            }
+
     header h2 {
         margin: 0 !important;
     }
-
-    header li {
-        display: inline-block;
-        float: left;
-        padding-right: 60px;
-    }
-
-        header li:last-child {
-            padding-right: 0;
-        }
 
     header a:hover {
         color: #003772;
@@ -94,12 +107,20 @@ header {
 .landing {
     background-image: url("img/bg.jpg");
     background-size: cover;
+    background-position-y: center ;
     min-height: 450px;
     text-align: center;
     color: #FFF;
-    padding: 90px 0;
     box-sizing: border-box;
 }
+    .dark-bg {
+        box-sizing: border-box;
+        padding: 90px 0;
+        min-height: 450px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        margin: 0 auto;
+    }
     .landing p {
         color: #FFF;
         max-width: 90%;
@@ -134,10 +155,11 @@ header {
     max-width: 90%;
     justify-content: space-between;
     margin: 50px auto;
+    margin-top: 0;
 }
     .section-one {
         max-width: 48%;
-        margin: auto;
+        margin: 0 auto;
     }
 
     .about a {
@@ -154,7 +176,8 @@ header {
     padding: 0;
     background-color: #e4edf0;
     overflow: hidden;
-    margin: 20px auto;
+    margin: 50px auto;
+    margin-top: 0;
 }
     .work-pictures {
         overflow: visible;
@@ -222,17 +245,28 @@ header {
 
 /* PRICE */
 #price-page {
-    max-width: 30%;
+    max-width: 70%;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
-    #price-page h1 {
-        font-size: ;
-    }
+.price-cont {
+    overflow: hidden;
+    max-width: 50%;
+}
+
+.coupon {
+    max-width: 100%;
+    margin: 25% 0;
+    border-radius: 20px;
+    box-shadow: black;
+}
 
 .price {
-    margin-top: 20px;
+    width: 350px;
+    margin: 0 auto;
     padding: 20px 0;
     color: #FFF;
     background-color: #14AFE3;
@@ -240,7 +274,8 @@ header {
 
     .price h2 {
         font-size: 3rem;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        margin-top: 0;
     }
 
     .price p {
@@ -259,13 +294,13 @@ header {
         text-transform: uppercase;
         font-weight: 600;
         letter-spacing: 2px;
-        width: 30%;
         padding: 10px 20px;
         background-color: #003772;
         outline: none;
         border: none;
         border-radius: 5px;
         margin-top: 20px;
+        margin-bottom: 20px;
         cursor: pointer;
     }
 
@@ -275,19 +310,33 @@ header {
         }
 /* contact us */
 .contact-us {
-    max-width: 30%;
+    max-width: 68%;
     margin: 50px auto;
+    margin-top: 30px;
     text-align: center;
-    border: 2px solid #14AFE3;
-    padding: 10px 0 20px 0;
+    border: 2px solid #003772;
+    border-radius: 10px;
+    padding: 10px;
 }
+    .flex {
+        margin: 0 auto;
+        max-width: 95%;
+        justify-content: space-between;
+        display: flex;
+    }
 
-    form input {
-        width: 90%;
+    .flex input {
+        width: 48%;
         border: 0;
-        border-bottom: 1px solid #14AFE3;
+        border-bottom: 2px solid #003772;
+        border-radius: 5px;
         padding: 10px 5px;
         background-color: #F9F9F9;
+    }
+
+    form input::placeholder {
+        color: #14AFE3;
+        font-weight: 600;
     }
 
 
@@ -308,6 +357,11 @@ header {
             background-color: #003772;
         }
 
+/* margin fix */
+section {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
 
 /* footer */
 footer {
@@ -356,7 +410,7 @@ footer {
         .footer-flex p {
             color: #000;
             margin: 0;
-            text-align: left;
+            text-align: center;
         }
     .footer-box {
         padding: 20px 0;
@@ -378,9 +432,21 @@ footer {
             }
 
 
+
+/* navbar space fix */
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 50%;
+    }
+}
+
 /* media queries for tabs */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -389,19 +455,39 @@ footer {
         font-size: 1.3rem;
     }
 
-        header nav {
-            max-width: 50%;
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 6vh;
+        height: 44vh;
+        background-color: #F9F9F9;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+        .nav-links li {
+            opacity: 0;
         }
-        
-        header li {
-            text-align: center;
-            padding-right: 20px;
-        }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .nav-active {
+        transform: translateX(0);
+    }
     
     .landing {
         min-height: 400px;
-        padding: 100px 0;
     }
+        .dark-bg {
+            min-height: 400px;
+            padding: 100px 0;
+        }
         
         .landing h1 {
             font-size: 2rem;
@@ -423,6 +509,20 @@ footer {
         .section-one h1 {
             font-size: 1.5rem;
         }
+
+        #price-page {
+            display: block;
+            max-width: 80%;
+        }
+
+            .price-cont {
+                margin: 10px auto;
+                max-width: 100%;
+            }
+
+            .coupon {
+                max-width: 100%;
+            }
 
 
         /* how it works */
@@ -465,6 +565,15 @@ footer {
         max-width: 80%;
     }
 
+    .flex {
+        max-width: 100%;
+        display: block;
+    }
+
+    .flex input {
+        width: 96%;
+    }
+
     /* footer */
     footer h1 {
         font-size: 1.5rem;
@@ -494,7 +603,7 @@ footer {
 
 
 /* phones */
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
     header nav {
         max-width: 90%;
     }
@@ -507,4 +616,29 @@ footer {
         min-height: 350px;
     }
 
+}
+
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }

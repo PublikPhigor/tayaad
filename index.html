@@ -11,17 +11,22 @@
         <!-- header -->
         <div class="container">
             <header> 
-                <div class="logo">
-                    <h2>Tayaad</h2>
-                </div>
                 <nav>
-                    <ul>
+                    <div class="logo">
+                        <h2>Tayaad</h2>
+                    </div>
+                    <ul class="nav-links">
                         <li><a href="index.html" class="current">Home</a></li>
                         <li><a href="#about-page">About</a></li>
                         <li><a href="#price-page">Price</a></li>
                         <li><a href="#contact-page">Contact</a></li>
                         <li><a href="https://www.tayaad.com" target="_blank">Login</a></li>
                     </ul>
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
                 </nav>
             </header>
     
@@ -30,9 +35,11 @@
         <!-- main -->
         <main>
             <section class="landing">
-                <h1>The largest community of testers in the world.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt minima error culpa enim aspernatur nobis aliquid natus. Repellat ducimus magni eius, reprehenderit iure obcaecati aut, natus sequi consequatur in tempore.</p>
-                <a href="#" class="btn">Get Started</a>
+                <div class="dark-bg">
+                    <h1>The largest community of vouchers in the world.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt minima error culpa enim aspernatur nobis aliquid natus. Repellat ducimus magni eius, reprehenderit iure obcaecati aut, natus sequi consequatur in tempore.</p>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
             </section>
             
             <section class="about" id="about-page">
@@ -40,21 +47,20 @@
                     <img src="img/windows.jpg" alt="pc" class="windows">
                 </div>
                 <div class="section-one">
-                    <h1>Learn new skills, Grow and connect...</h1>
+                    <h1>Promote your business, Grow and connect...</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illum at minima repellat in fugit, quo reiciendis ea laborum fuga error tempore exercitationem sed, atque labore nesciunt vitae eos non excepturi amet asperiores earum magni porro. Reiciendis commodi ipsa mollitia, quibusdam dicta corrupti vero totam! Voluptates doloremque praesentium veritatis nisi?</p>
-                    <a href="#">Read more...</a>
                 </div>    
             </section>
 
             <section class="how-it-works">
                 <div class="work-pictures">
                     <div class="work-text">
-                        <h2>How Tayaad chat works</h2>
+                        <h2>How Tayaad works</h2>
                         <div class="work-body work-body-1">
                             <img src="img/work.png" alt="" class="work-img">
                             <div class="work-side-two">
                                 <h4 class="work-number">1</h4>
-                                <h5 class="work-head">How Tayaad chat works</h5>
+                                <h5 class="work-head">How Tayaad works</h5>
                                 <p class="work-p">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam laborum vitae at consequuntur similique molestiae ad, soluta est impedit.
                                 </p>
@@ -64,7 +70,7 @@
                             <img src="img/work.png" alt="" class="work-img">
                             <div class="work-side-two">
                                 <h4 class="work-number">2</h4>
-                                <h5 class="work-head">How Tayaad chat works</h5>
+                                <h5 class="work-head">How Tayaad works</h5>
                                 <p class="work-p">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam laborum vitae at consequuntur similique molestiae ad, soluta est impedit.
                                 </p>
@@ -74,7 +80,7 @@
                             <img src="img/work.png" alt="" class="work-img">
                             <div class="work-side-two">
                                 <h4 class="work-number">3</h4>
-                                <h5 class="work-head">How Tayaad chat works</h5>
+                                <h5 class="work-head">How Tayaad works</h5>
                                 <p class="work-p">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam laborum vitae at consequuntur similique molestiae ad, soluta est impedit.
                                 </p>
@@ -85,26 +91,35 @@
 
             </section>
             <section id="price-page">
-                <h1>Price</h1>
-                <div class="price">
-                    <h2>$50</h2>
-                    <hr>
-                    <p class="lorem-text">Lorem ipsum dolor sit amet.</p>
-                    <p class="lorem-text">Lorem ipsum dolor sit amet.</p>
-                    <p class="lorem-text">Lorem ipsum dolor sit amet.</p>
-                    <p class="lorem-text">Lorem ipsum dolor sit amet.</p>
-                    <hr>
-                    <a href="#"><input type="button" value="submit"></a>
+                <div class="price-cont">
+                    <div class="price">
+                        <h1>Price</h1>
+                        <h2>$50</h2>
+                        <hr>
+                        <p class="lorem-text">Lorem ipsum dolor sit amet.</p>
+                        <p class="lorem-text">Lorem ipsum dolor sit amet.</p>
+                        <p class="lorem-text">Lorem ipsum dolor sit amet.</p>
+                        <p class="lorem-text">Lorem ipsum dolor sit amet.</p>
+                        <hr>
+                        <a href="#"><input type="button" value="buy"></a>
+                    </div>
+                </div>
+                <div class="price-cont">
+                    <img src="img/coupon.jpeg" alt="" class="coupon">
                 </div>
             </section>
 
             <section class="contact-us" id="contact-page">
                 <h1>Contact Us</h1>
                 <form action="POST">
-                    <input type="name" placeholder="Name">
-                    <input type="text" placeholder="Company">
-                    <input type="email" placeholder="Comapny Email">
-                    <input type="text" placeholder="Phone">
+                    <div class="flex">
+                        <input type="name" placeholder="Name">
+                        <input type="text" placeholder="Company">
+                    </div>
+                    <div class="flex">
+                        <input type="email" placeholder="Comapny Email">
+                        <input type="text" placeholder="Phone">    
+                    </div>
                     <input type="button" value="Submit">
                 </form>
             </section>
@@ -113,22 +128,21 @@
         <!-- footer -->
         <footer>
             <div class="start-testing">
-                <h1>Ready to start Testing?</h1>
+                <h1>Get A Voucher for Your Business</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quam dolorum eum saepe! Veniam reiciendis modi minus quo unde consequatur mollitia culpa. Nisi blanditiis sapiente dolore doloremque corporis modi porro.</p>
-                <a href="#" class="btn">Become a tester</a>
+                <a href="#" class="btn">Register now</a>
             </div>
             <div class="footer-flex">
-                <h2>Tayaad</h2>
                 <div>
-                    <h3>Join Tayaad testing community, a community like no other.</h3>
-                    <p>Learn, earn and connect with a global community of software testers.</p>
+                    <h3>Join Tayaad voucher community, a community like no other.</h3>
+                    <p>Promote, earn and connect with a global community of marketers.</p>
                 </div>
             </div>
             <div class="footer-box">
                 <div class="footer-item">
                     <p>Office address</p>
                     <p>+234123576893</p>
-                    <p>hello@tayaad.org</p>
+                    <p>admin@tayaad.com</p>
                     <p>www.tayaad.com</p>
                 </div>
                 <div class="footer-item">
@@ -143,7 +157,9 @@
                 </div>
             </div>
         </footer>
-
     </div>
+
+
+<script src="nav.js"></script>
 </body>
 </html>
