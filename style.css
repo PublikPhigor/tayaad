@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    max-width: 90%;
+    max-width: 98%;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -68,22 +68,48 @@ li {
 header {
     border-bottom: 4px solid #003772;
     margin-bottom: 0;
+    padding: 0;
 }
     nav {
         display: flex;
         justify-content: space-between;
         height: 6vh;
+        padding: 5px 0;
     }
-
+        .logo {
+            max-height: 30px;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
         .nav-links {
             width: 40%;
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: right;
+            padding: 0;
+            padding-right: 0;
+            max-height: 35px;
+            margin-bottom: 0;
         }
             .nav-links li {
                 list-style: none;
+                max-height: 30px;
+                box-sizing: border-box;
             }
+
+            .login-box {
+                color: #003772;
+                padding: 5px 20px;
+                border: 1px solid #003772;
+                max-height: 30px;
+                margin: 0;
+            }
+                .login-box:hover {
+                    color: #FFF;
+                    background-color: #003772;
+                }
+
         .burger {
             display: none;
         }
@@ -399,7 +425,7 @@ footer {
         display: flex;
         /* justify-content: space-evenly; */
     }
-        .footer-flex h2, h3 {
+        /* .footer-flex h2, h3 {
             margin: 0 auto;
         }
 
@@ -411,13 +437,17 @@ footer {
             color: #000;
             margin: 0;
             text-align: center;
-        }
+        } */
     .footer-box {
         padding: 20px 0;
         background-color: #e4edf0;
         color: #14AFE3;
         display: flex;
     }
+        .footer-titles {
+            color: #003772;
+        }
+
         .footer-box p {
             color: #14AFE3;
             font-weight: 600;
@@ -460,16 +490,20 @@ footer {
         position: absolute;
         right: 0;
         top: 6vh;
-        height: 44vh;
+        height: 80vh;
         background-color: #F9F9F9;
         flex-direction: column;
-        align-items: center;
-        width: 70%;
+        align-items: left;
+        padding: 0 10px;
+        width: 78%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
         .nav-links li {
             opacity: 0;
+            border-bottom: 1px solid #CCC;
+            padding-bottom: 10px;
+            padding-left: 10px;
         }
 
     .burger {
